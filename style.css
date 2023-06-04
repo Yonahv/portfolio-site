@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 
 * {
     box-sizing: border-box;
@@ -140,3 +141,139 @@ h1, h2 {
         margin-bottom: 20px;
     }
 }
+
+
+
+/* Styles for the challenges page */
+
+#h1-challenges {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 40px auto;
+    margin-left: 20px;
+}
+
+.body-container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+.solution {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    overflow: hidden;
+    
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .challenges-h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding-bottom: 10px ;
+    
+  }
+  
+  .test {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  #output {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .output{
+  overflow: hidden;
+  word-wrap: break-word;
+  }
+
+  .code {
+    background-color: rgb(241, 236, 236);
+    font-family:'Anonymous Pro', monospace;
+    font-size: 1.1rem;
+    padding:2px;
+  }
+
+  .comments {
+    font-size: 1rem;
+  }
+
+
+  /* @media for smaller screens */
+
+  /* @media (max-width: 767px) {
+    #h1-challenges {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 20px auto;
+      margin-left: 10px;
+    }
+  
+    .body-container {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+    }
+  
+    .solution {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      padding: 10px;
+    }
+  
+    .challenges-h3 {
+      font-size: 18px;
+    }
+  
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+    }
+  }
+   */
