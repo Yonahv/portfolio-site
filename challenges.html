@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+<body>
+    <div class="body-container">
+        <h1 id="h1-challenges"> 10 JavaScript code challenges for beginners</h1>
+        <p style="text-align: center;text-decoration: underline;">With solutions - A case study</p>
+        <p>I found these ten challenges on 
+            <a href="https://www.codecademy.com/resources/blog/10-javascript-code-challenges-for-beginners/" style="color: blue;">Codecademy</a>.
+            I threw in some html and css to make them functional in the browser.
+            <br><br>
+            Below is somewhat of a case study walking through the process of me solving these challenges.
+        </p>
+        <h2 class="challenges-h2">1. Print even numbers from a given array </h2>
+        <p>  In this challenge, the requirement was to log all even numbers from 0-10. <br><br> To solve it, a simple <span class="code">console.log()</span> would do. <span class="comments">(Nice code block font BTW eh?)</span> <br><br>
+            Obviously, if I wanted to log even numbers past 10, the most efficient way would be to loop through and only return numbers that were <span class="code">%2==0.</span> 
+            <br><br>
+            Because I was getting user input, I modified the exercise to accept numbers from the user. Running the function will return only the even numbers. I added an <span class="code">eventListener</span>
+            to allow the use to either press <span class="code">enter</span>or hit the button. <br><br>
+            I had some issues with the answer spilling outside the solution container. I had to use some css <span class="code">word-wrap</span> and <span class="code">overflow</span> properties to fix it.
+            <br><br>Try it out!
+
+        </p>
+        <section class="solution">
+            <h3 class="challenges-h3">Enter a string of numbers</h3>
+            <h5 style="margin-bottom:10px ;">Make sure to seperate the numbers by a comma</h5>
+            <input type="text" name="even-numbers" id="even-numbers">
+            <button class="button" id="button-1" type="submit">Run</button>
+            <p class="output" id="output"></p>       
+        </section>
+                
+                
+        <h2 class="challenges-h2">2. Print a table containing multiplication tables</h2>
+        <p></p>
+        <section class="solution">
+            <h3 class="challenges-h3">Print a multiplication table</h3>
+            <h5 style="margin-bottom: 10px">Enter a number to view it's 10x table</h5>
+            <input type="text" name="multiplication-table" id="multiplication-table">
+            <button class='button' id="button-2" type="submit">Run</button>
+            <p id="output-2"></p>
+        </section>
+                        
+        <h2 class="challenges-h2">3. Create a length converter function</h2>
+        <p></p>
+        <section class="solution">
+            <h3 class="challenges-h3">Length converter</h3>
+            <h5 style="margin-bottom: 10px;">Enter a distance in kilometers</h5>
+            <input type="text" name="length-converter" id="length-converter">
+            <button class="button" id="button-3" type="submit">Run</button>
+            <p id="output-3"></p>
+        </section>
+
+        <h2 class="challenges-h2">4. Calculate the sum of numbers within an array</h2>
+        <p></p>
+        <section class="solution">
+            <h3 class="challenges-h3">Calculate sum of numbers</h3>
+            <input type="text" name="sum-of-array" id="sum-of-array">
+            <button class="button" id="button-4" type="submit">Run</button>
+            <p id="output-4"></p>
+        </section>
+
+
+        <h2 class="challenges-h2">5. Create a function that reverses an array</h2>
+        <p></p>
+        <section class="solution">
+            <h3 class="challenges-h3">Reverse the characters</h3>
+            <input type="text" name="reverse-array" id="reverse-array">
+            <button class="button" id="button-5" type="submit">Run</button>
+            <p id="output-5"></p>
+        </section>
+
+        <h2 class="challenges-h2">6. Sort an array from lowest to highest</h2>
+        <p></p>
+        <section class="solution">
+            <h3 class="challenges-h3">Sort numbers from lowest to highest</h3>
+            <input type="text" name="low-to-high" id="low-to-high">
+            <button class="button" id="button-6" type="submit">Run</button>
+            <p id="output-6"></p>
+        </section>
+        
+        <h2 class="challenges-h2">7. Create a function that filters out negative numbers</h2>
+        <section class="solution">
+            <h3 class="challenges-h3">Filter negatives</h3>
+            <h5>Enter numbers seperated by commas. Include negative numbers too.</h5>
+            <input type="text" name="filter-negative" id="filter-negative">
+            <button class="button" id="button-7" type="submit">Run</button>
+            <p id="output-7"></p>
+        </section>
+        
+        <h2 class="challenges-h2">8. Remove the spaces found in a string</h2>
+        <p></p>
+        <section class="solution">
+            <h3 class="challenges-h3">Remove whitespace</h3>
+            <h5>Enter some random characters and include whitespace.</h5>
+            <input type="text" name="remove-whitespace" id="remove-whitespace">
+            <button class="button" id="button-8" type="submit">Run</button>
+            <p id="output-8"></p>
+        </section>
+        
+        <h2 class="challenges-h2">9. Return a Boolean if a number is divisible by 10</h2>
+        <p></p>
+        <section class="solution">
+            <h3 class="challenges-h3">Is divisible by 10</h3>
+            <h5>Enter a number to see if it's divisible by 10</h5>
+            <input type="text" name="divisible-10" id="divisible-10">
+            <button class="button" id="button-9" type="submit">Run</button>
+            <p id="output-9"></p>
+        </section>
+        
+        <h2 class="challenges-h2">10. Return the number of vowels in a string</h2>
+        <p></p>
+        <section class="solution">
+            <h3 class="challenges-h3">Print number of vowels in a string</h3>
+            <input type="text" name="vowels" id="vowels">
+            <button class="button" id="button-10" type="submit">Run</button>
+            <p id="output-10"></p>
+        </section>
+    
+    </div>
+
+
+
+    <script src="./jsChallenges.js"></script>
+</body>
+</html>
