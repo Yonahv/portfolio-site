@@ -7,9 +7,22 @@
     <title>Challenges</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">Yonah Veffer - Front end dev</a>
+            <ul class="navigation-items">
+                <li><a href="#">About me</a></li>
+                <li><a href="./challenges.html">Challenges</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="body-container">
         <h1 id="h1-challenges"> 10 JavaScript code challenges for beginners</h1>
         <p style="text-align: center;text-decoration: underline;">With solutions - A case study</p>
@@ -24,8 +37,8 @@
             Obviously, if I wanted to log even numbers past 10, the most efficient way would be to loop through and only return numbers that were <span class="code">%2==0.</span> 
             <br><br>
             Because I was getting user input, I modified the exercise to accept numbers from the user. Running the function will return only the even numbers. I added an <span class="code">eventListener</span>
-            to allow the use to either press <span class="code">enter</span>or hit the button. <br><br>
-            I had some issues with the answer spilling outside the solution container. I had to use some css <span class="code">word-wrap</span> and <span class="code">overflow</span> properties to fix it.
+            to allow the user to either press <span class="code">enter</span> or hit the button. <br><br>
+            I had some issues with the answer spilling outside of the solution container. I had to use some css <span class="code">word-wrap</span> and <span class="code">overflow</span> properties to fix it.
             <br><br>Try it out!
 
         </p>
@@ -36,8 +49,8 @@
             <button class="button" id="button-1" type="submit">Run</button>
             <p class="output" id="output"></p>       
         </section>
-                
-                
+        
+        
         <h2 class="challenges-h2">2. Print a table containing multiplication tables</h2>
         <p></p>
         <section class="solution">
@@ -47,9 +60,13 @@
             <button class='button' id="button-2" type="submit">Run</button>
             <p id="output-2"></p>
         </section>
-                        
+        
         <h2 class="challenges-h2">3. Create a length converter function</h2>
-        <p></p>
+        <p>The requirement here was to create a function converting kilometers to miles. Eventually I will add the abilily to 
+            convert the other way as well. <br><br>
+            Initially, the result was giving me way to many decimal points. I added <span class="code">toFixed(2)</span> to limit it to two decimal 
+            spaces.
+        </p>
         <section class="solution">
             <h3 class="challenges-h3">Length converter</h3>
             <h5 style="margin-bottom: 10px;">Enter a distance in kilometers</h5>
@@ -57,46 +74,64 @@
             <button class="button" id="button-3" type="submit">Run</button>
             <p id="output-3"></p>
         </section>
-
+        
         <h2 class="challenges-h2">4. Calculate the sum of numbers within an array</h2>
-        <p></p>
+        <p>Here I added a little extra functionality, where if the user input is empty, it will ask to enter some numbers. <br><br> I then noticed that 
+            if the user enters something other than a number the result was NaN.<br><br> I adjusted the <span class="code">if</span> statement to 
+            verify that the user entered a valid number.<br><br> I then ran the code with decimal numbers. I realized I needed to covert the string to a floating 
+            point number using <span class="code">parseFloat()</span>. <br><br>
+            There's still a bug, where if the user enters a string with numbers and letters such as <span class="code">12,a,4</span>, the result is Nan.
+            I need to fix that too.
+        </p>
         <section class="solution">
-            <h3 class="challenges-h3">Calculate sum of numbers</h3>
+            <h3 class="challenges-h3">Enter a string of numbers</h3>
+            <h5 style="margin-bottom:10px ;">Make sure to seperate the numbers by a comma</h5>
             <input type="text" name="sum-of-array" id="sum-of-array">
             <button class="button" id="button-4" type="submit">Run</button>
             <p id="output-4"></p>
         </section>
-
-
+        
+        
         <h2 class="challenges-h2">5. Create a function that reverses an array</h2>
-        <p></p>
+        <p>This function can accept either letters or numbers or both.</p>
         <section class="solution">
-            <h3 class="challenges-h3">Reverse the characters</h3>
+            <h3 class="challenges-h3">Enter a string of numbers and letters</h3>
+            <h5 style="margin-bottom:10px ;">Make sure to seperate the characters by a comma</h5>
             <input type="text" name="reverse-array" id="reverse-array">
             <button class="button" id="button-5" type="submit">Run</button>
             <p id="output-5"></p>
         </section>
-
+        
         <h2 class="challenges-h2">6. Sort an array from lowest to highest</h2>
-        <p></p>
+        <p style="text-decoration: line-through; text-decoration-thickness: 1px;"> I need to add some functionality here. When a user enters a string that includes a letter such as 4,a,23,5 the function should throw an
+            error. </p>
+        <p> I used the <span class="code">some()</span> method together with <span class="code">isNan()</span> to check if any element in the array is not
+        a number. If it's not a number the function will through an error. </p>
         <section class="solution">
             <h3 class="challenges-h3">Sort numbers from lowest to highest</h3>
+            <h5 style="margin-bottom:10px ;">Make sure to seperate the characters by a comma</h5>
             <input type="text" name="low-to-high" id="low-to-high">
             <button class="button" id="button-6" type="submit">Run</button>
             <p id="output-6"></p>
         </section>
         
         <h2 class="challenges-h2">7. Create a function that filters out negative numbers</h2>
+        <p> A bug in my first draft had it that if the user entered a string 
+            that contained a negative letter such as <span class="code">1,-a,4,-2</span> the funtion would still run. I used the same logic 
+            from the previous exercise that verifies the user did not enter a letter. 
+        </p>
         <section class="solution">
-            <h3 class="challenges-h3">Filter negatives</h3>
-            <h5>Enter numbers seperated by commas. Include negative numbers too.</h5>
+            <h3 class="challenges-h3">Enter numbers seperated by commas</h3>
+            <h5 style="margin-bottom:10px ;">Include negative numbers too.</h5>
+            <h5></h5>
             <input type="text" name="filter-negative" id="filter-negative">
             <button class="button" id="button-7" type="submit">Run</button>
             <p id="output-7"></p>
         </section>
         
         <h2 class="challenges-h2">8. Remove the spaces found in a string</h2>
-        <p></p>
+        <p>This exercise was fairly straight forward. I used <span class="code">.split(" ").join("")</span> on the user input to get rid of 
+        the white space.</p>
         <section class="solution">
             <h3 class="challenges-h3">Remove whitespace</h3>
             <h5>Enter some random characters and include whitespace.</h5>
@@ -106,19 +141,28 @@
         </section>
         
         <h2 class="challenges-h2">9. Return a Boolean if a number is divisible by 10</h2>
-        <p></p>
+        <p>Originaly the function just returned a boolean value. I figured it would look nicer If I added a sentence to it. First I used an <span class="code">if else</span>
+        statement. I then refactored the code to use a ternary operator like this: <br><br>
+        <code><span style="color: rgb(7, 177, 250);">return</span> num % 10 === 0 ? `${num} is divisible by 10` : `${num} is not divisble by 10.`</code></p>
+    
         <section class="solution">
-            <h3 class="challenges-h3">Is divisible by 10</h3>
-            <h5>Enter a number to see if it's divisible by 10</h5>
+            <h3 class="challenges-h3">Enter a number to see if it's divisible by 10</h3>
             <input type="text" name="divisible-10" id="divisible-10">
             <button class="button" id="button-9" type="submit">Run</button>
             <p id="output-9"></p>
         </section>
         
         <h2 class="challenges-h2">10. Return the number of vowels in a string</h2>
-        <p></p>
+        <p>For this, I first declared a variable with an array of all the vowels. I then lopped through the user input and used the 
+            <span class="code">.includes()</span> array method to compare the user input to the vowels variable. If a letter in the input
+            was equal to a vowel I would <span class="code">total ++</span>. <br><br>
+            Because my vowels variable looked like this: <br><br>
+            <code><span style="color: rgb(7, 177, 250);">const</span> vowels = ['a','e','i','o','u',];</code><br><br>
+            if the user entered a capital letter vowel it would'nt register. I just added the capital letters to the variable like so: <br><br>
+            <code> <span style="color: rgb(7, 177, 250);">const</span> vowels = ['a','A', 'e','E', 'i','I', 'o','O', 'u','U'];</code> <br><br>
+        Although I probably could have used <span class="code">.toLowerCase()</span> somehow.</p>
         <section class="solution">
-            <h3 class="challenges-h3">Print number of vowels in a string</h3>
+            <h3 class="challenges-h3">Enter a random string of letters</h3>
             <input type="text" name="vowels" id="vowels">
             <button class="button" id="button-10" type="submit">Run</button>
             <p id="output-10"></p>

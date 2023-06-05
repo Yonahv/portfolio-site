@@ -10,6 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    font-weight: 300;
     
 }
 
@@ -42,7 +43,7 @@ h1, h2 {
     font-size: 18px;
     font-weight: bold;
 }
-.logo{
+.logo,.navbar a.logo {
     font-size: x-large;
     font-weight: bold;
 }
@@ -155,6 +156,7 @@ h1, h2 {
 }
 
 p {
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     line-height: 28px;
     margin: 40px auto;
@@ -163,10 +165,8 @@ p {
 
 .body-container {
     width: 1000px;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 0 auto 20px;
     padding: 20px;
-    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -228,20 +228,26 @@ p {
   }
 
   .code {
-    background-color: rgb(241, 236, 236);
+    background-color: #f2f1f1;
     font-family:'Anonymous Pro', monospace;
     font-size: 1.1rem;
-    padding:2px;
+    padding:2px 4px;
+    border-radius: 5px;
   }
 
   .comments {
     font-size: 1rem;
   }
 
-
+code {
+    color: rgb(217, 214, 214);
+    background-color: black;
+    border-radius: 0.2rem;
+    padding: 4px;
+}
   /* @media for smaller screens */
 
-  /* @media (max-width: 767px) {
+   @media (max-width: 767px) {
     #h1-challenges {
       font-size: 30px;
       margin-top: 20px;
@@ -275,5 +281,10 @@ p {
       width: 100%;
       padding: 8px;
     }
-  }
-   */
+
+    .button{
+        margin-left: 130px;
+        margin-top: 30px;
+    }
+}
+
