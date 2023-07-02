@@ -1,3 +1,7 @@
+
+//CHALLENGES PAGE//
+
+
 ///////////////////////////////////////////////////////////////
 ///// EXCERCISE 1 -  Print all even numbers from 0 – 10 /////
 /////////////////////////////////////////////////////////////
@@ -31,7 +35,7 @@ const returnEvenNumbers = (arr) => {
   };
   
   
-  returnEvenNumbersEvent()
+//   returnEvenNumbersEvent()
   
   
   /////////////////////////////////////////////////////////////////////////
@@ -279,6 +283,13 @@ const returnEvenNumbers = (arr) => {
   })
   
   
+
+  //Function to calculate time past since I started coding//
+
+
+
+
+
   
   /////////I will use the code below to refactor and make the code less DRY//////////
   

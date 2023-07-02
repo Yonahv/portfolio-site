@@ -10,7 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Code+Pro&display=swap" rel="stylesheet">
 
-    
+    <script> 
+            //I put this here so it wouldn't load on the challenges page
+            let startTime =  new Date('November 22, 2022 09:00:00')
+            const intlNumberFormatter = new Intl.NumberFormat("en-US")
+        setInterval(function() {
+        let elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+        document.getElementById("time-coding").innerHTML =intlNumberFormatter.format(elapsedTime);
+          
+        }, 1000);
+    </script>
 
 </head>
 <body>
@@ -28,44 +37,53 @@
     <header class="header">
         <div class="container">
             <div>
-                <h2>About me</h2>
+                <h2>Hi I'm Yonah</h2>
                 <p>
-                    Hello, my name is Yonah Veffer and I am a web developer. 
-                    I began my coding journey in mid-2022, and since then, I have been passionately dedicated to learning the art of programming. 
-                    I have recently created a portfolio site from scratch using HTML, CSS, and JS to showcase my skills.
+                    
+                    I began my coding journey in 2022, and since then, I've been dedicated to learning the art of programming. 
+                    I have recently created this portfolio site from scratch using HTML, CSS, and JS to showcase my skills.
                     <br>
                     To enhance my learning experience, I have been using Codecademy as my primary learning resource. Through the various programming exercises, 
-                    I have gained a deep understanding of different programming concepts, including data structures, algorithms, and web development technologies.
+                    I have gained an understanding of different programming concepts, including data structures, algorithms, and web development technologies.
                     <br><br>
                     I believe that practice is the key to success in programming. As a result, 
                     I have been actively seeking out new projects to work on and have been honing my skills through personal projects and collaborations with other developers.
                     I am committed to constantly improving my skills and keeping up with the latest developments in the field.
-                    <br>
-                    I am excited about the prospect of landing a job soon as a web developer. 
-                    With my strong foundation in coding and my eagerness to learn and grow, I am confident that I can contribute meaningfully to any development team. 
-                    I look forward to the opportunity to put my skills to use and to further my career as a web developer.
                 </p>
+                <p>It's been <span id="time-coding"></span>  seconds since I started coding. </p>  
+                
                 <br>
             </div>
             <img src="Portfolio pic.png" alt="Me">
         </div>
     </header>
 
-   
-       <section class="skills">
-            <div class="container">
-                <h2 id="skills">Skills</h2>
-                <div class="coding-icons">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML 5 icon" title="HTML 5"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS3 icon" title="CSS 3"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript icon" title="javascript" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="GitHub icon" title="GitHub"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git icon" title="Git" />
-                </div>
+    <section class="projects">
+        <div class="container">
+            <h2 id="projects">Projects</h2>
+            <p>Here is a simple project I made with Vue.js - <a href="https://yonahv.github.io/timer/">Reaction timer</a></p>
+            <p>For more check out my Github - <a href="https://github.com/Yonahv">GitHub </a></p>
+            <p>A couple of JS challenges here - <a href="./challenges.html">Challenges</a></p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2 id="skills">Skills</h2>
+            <div class="coding-icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML 5 icon" title="HTML 5"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS3 icon" title="CSS 3"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript icon" title="javascript" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg" alt="Vue icon" title="vuejs"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="GitHub icon" title="GitHub"/>        
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git icon" title="Git" />
+            </div>
             
                  
             </div>
-        </section>
+    </section>
+   
+     
 
     <footer id="contact">
         <h2>Contact Me</h2>
@@ -79,6 +97,6 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
